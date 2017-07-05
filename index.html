@@ -1,7 +1,830 @@
-<!doctype>
-<html>
-  <head></head>
-  <body>
-    <h1>hello world</h1>
-  </body>
+<!DOCTYPE html>
+<!--1 给html指定语言属性-->
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2 指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <!--3 指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <!--4 引入bootstrap.css主文件-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <!--5 引入两个兼容性js文件-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>小诗站</title>
+    <style>
+    </style>
+</head>
+<body>
+<!--第一部分：导航-->
+<nav class="navbar navbar-default navbar-fixed-top" id="top-nav">
+    <div class="container">
+        <!--1 navbar-header-->
+        <div class="navbar-header">
+            <!--1.navbar-brand-->
+            <a href="index.html" class="navbar-brand"><img src="Images/poem.jpg" alt=""/></a>
+            <!--2.响应式按钮navbar-toggle-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#d1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--2 响应式内容navbar-collapse collapse-->
+        <div  class="navbar-collapse collapse">
+            <!--1.导航链接  靠右-->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a target="_self" href="index.html">
+                    <span class="glyphicon glyphicon-home"></span>
+                    首页
+                    </a>
+                </li>
+                <li><a href="usercenter.html">
+                    <span class="glyphicon glyphicon-user"></span>
+                    用户中心</a></li>
+                <li><a href="register.html">
+                    <span class="glyphicon glyphicon-heart"></span>
+                    注册</a></li>
+                <li><a href="login.html">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--第二部分：详细网页内容-->
+<div class="container" id="content">
+    <!--第一行-->
+    <div class="row">
+        <!--2-1：左侧：热门文章；中：热门新闻；右侧：最新发表-->
+        <!--左侧：热门图文文章 380w-->
+        <div class="col-md-4 hidden-xs">
+            <!--轮播照片-->
+            <div id="myCar" class="carousel slide" data-ride="carousel" data-interval="8000">
+                <!--轮播内容区域-->
+                <div class="carousel-inner">
+                    <!--1、轮播图片1-->
+                    <div class="item active">
+                        <img src="Images/left_1.jpg">
+                        <div class="carousel-caption">
+                            <h4>再别康桥</h4>
+                            <p>Accusantium, consectetur cum</p>
+                        </div>
+                    </div>
+                    <!--2、轮播图片2-->
+                    <div class="item">
+                        <img src="Images/left_2.jpg">
+                        <div class="carousel-caption">
+                            <h4>你若安好便是晴天</h4>
+                            <p>reprehenderit sint vitae!</p>
+                        </div>
+                    </div>
+                    <!--3、轮播图片3-->
+                    <div class="item">
+                        <img src="Images/left_1.jpg">
+                        <div class="carousel-caption">
+                            <h4>假如生活欺骗了你</h4>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </div>
+                <!--导航小圆点-->
+                <ul class="carousel-indicators">
+                    <li data-target="#myCar" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCar" data-slide-to="1"></li>
+                    <li data-target="#myCar" data-slide-to="2"></li>
+                </ul>
+            </div>
+        </div>
+        <!--中：热门新闻 380w-->
+        <div class="col-sm-6 col-md-4">
+            <div class="hot-content">
+                <h4><a href="#" style="color:#B5000C"><b>&nbsp;&nbsp;金融VS实体，如何打破“相生相克”</b></a></h4>
+                <ul>
+                    <li><a href="#">保护好新实体经济迅速崛起的好势头</a></li>
+                    <li><a href="#">有多少意外可以重来？</a></li>
+                </ul>
+                <h4><a href="#" style="color:#B5000C"><b>&nbsp;&nbsp;刘士余主席讲话要点解析</b></a></h4>
+                <ul>
+                    <li><a href="#">房企融资大门打开的不是时候</a></li>
+                    <li><a href="#">有多少意外可以重来？</a></li>
+                </ul>
+                <ul style="border-bottom: none">
+                    <li><a href="#">鲁宁：幸运之年，中澳搁置美国因素务实前行</a></li>
+                    <li><a href="#">朝鲜“先发制人”警告为何遭遇韩国白</a></li>
+                    <li><a href="#">朝鲜“先发制人”警告为何遭遇韩国白</a></li>
+                    <li><a href="#">朝鲜“先发制人”警告为何遭遇韩国白</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧：最新发表 280w-->
+        <div class="col-sm-6 col-md-4">
+            <div class="newest">
+                <div>最新发表</div>
+                <ul>
+                    <li><a href="#">琵笆仙 咏平遥古城</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">浣溪沙：忆江南</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">小园梅</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">2015第一首：颂词</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">艰难旅程</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                </ul>
+                <div>圈子</div>
+                <ul class="newest-circle lf">
+                    <li><a href="#">
+                        <img src="Images/right_1.jpg" alt=""/>
+                        文秀网
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/right_2.jpg" alt=""/>
+                        读者
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/right_3.jpg" alt=""/>
+                        意林
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--第二行：动画特效的圆形图片-->
+    <div class="row">
+        <div class="col-md-12 hidden-xs hidden-sm thumb-img">
+            <ul class="lf">
+                <li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li>
+                <li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li>
+                <li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li>
+                <li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li><li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li><li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--第三行：诗集内容模块-->
+    <!--抬头-->
+    <div class="row" id="lt-title">
+        <div class="col-xs-12"><span class="glyphicon glyphicon-hand-right"></span> 诗集</div>
+    </div>
+    <div class="row" id="poem-part">
+        <!--具体内容部分：左侧-中策-右侧-->
+        <!--左侧 图片文章-->
+        <div class="col-md-4 hidden-xs hidden-sm lt-tt clear">
+            <!--图文部分-->
+                <dl>
+                    <dt><img src="Images/7.jpg" class="img-responsive"/></dt>
+                    <dd><b>菲律宾货船与美军驱逐舰相撞责任在谁</b></dd>
+                </dl>
+            <!--排行-->
+            <div class="lt-le">
+                <ul class="lt-dd lf">
+                    <li><a href="#">博文排行</a></li>
+                    <li><a href="#">热度排行</a></li>
+                </ul>
+                    <!--排行内容-->
+                <div class="tt-switch">
+                    <ul class="clear">
+                        <li>
+                            <div><i class="bill-1">1</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div><i class="bill-2">2</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-2">3</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">4</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">5</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                    <!--热度内容-->
+                <div class="dd-switch">
+                    <ul>
+                        <li>
+                            <div><i class="bill-1">1</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div><i class="bill-2">2</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-2">3</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">4</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">5</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--中侧 热门诗文-->
+        <div class="col-md-4 col-sm-6 ss-hot clear">
+            <div class="ss-mid">
+                <h3><a href="#">金岩石：下半年A股会涨起来吗？</a></h3>
+                <p>从股市本身的一些指标看，近期或将出现一波行情，如果说上半年的中国股市跌多涨少，下半年股市的情况会显著好转。</p>
+            </div>
+            <div class="ss-fill">
+                <div>诗词墨苑
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">琵笆仙 咏平遥古城</a></li>
+                    <li><a href="#">浣溪沙：忆江南</a></li>
+                    <li><a href="#">小园梅</a></li>
+                    <li><a href="#">2015第一首：颂词</a></li>
+                    <li><a href="#">艰难旅程</a></li>
+                    <li><a href="#">艰难旅程</a></li>
+                </ul>
+            </div>
+            <div class="ss-fed">
+                <div>散文随笔
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">琵笆仙 咏平遥古城</a></li>
+                    <li><a href="#">浣溪沙：忆江南</a></li>
+                    <li><a href="#">小园梅</a></li>
+                    <li><a href="#">2015第一首：颂词</a></li>
+                    <li><a href="#">艰难旅程</a></li>
+                    <li><a href="#">艰难旅程</a></li>
+                </ul>
+            </div>
+            <div class="ss-seven">
+                <div>小说时代
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">琵笆仙 咏平遥古城</a></li>
+                    <li><a href="#">浣溪沙：忆江南</a></li>
+                    <li><a href="#">小园梅</a></li>
+                    <li><a href="#">2015第一首：颂词</a></li>
+                    <li><a href="#">艰难旅程</a></li>
+                    <li><a href="#">艰难旅程</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧 诗词名家-->
+        <div class="col-md-4 col-sm-6 hidden-xs clear">
+            <div class="rt-bg">
+                <div>诗词大家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul class="lf">
+                    <li><a href="#">
+                        <img src="Images/mj_1.jpg" class="img-responsive" alt=""/>
+                        名家1
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_2.jpg" class="img-responsive"  alt=""/>
+                        名家2
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_3.jpg" class="img-responsive"  alt=""/>
+                        名家3
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_4.jpg" class="img-responsive" alt=""/>
+                        名家4
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_5.jpg" class="img-responsive" alt=""/>
+                        名家5
+                    </a></li> <li><a href="#">
+                        <img src="Images/mj_6.jpg" class="img-responsive" alt=""/>
+                        名家6
+                    </a></li>
+                </ul>
+            </div>
+            <div class="rt-mj">
+                <div>名家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">琵笆仙 咏平遥古城</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">浣溪沙：忆江南</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">小园梅</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">2015第一首：颂词</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">艰难旅程</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">艰难旅程</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--文化 行-->
+
+    <div class="row" id="cul-title">
+        <div class="col-xs-12"><span class="glyphicon glyphicon-hand-right"></span> 文化</div>
+    </div>
+    <div class="row" id="cul-part">
+        <!--具体内容部分：左侧-中策-右侧-->
+        <!--左侧 图片文章-->
+        <div class="col-md-4  hidden-xs hidden-sm clear lt-tt">
+            <!--图文部分-->
+            <dl>
+                <dt><img src="Images/6.jpg" class="img-responsive"/></dt>
+                <dd><b>母爱铸就的圣贤——雪漠解读《孟子传》</b></dd>
+            </dl>
+            <!--名家内容-->
+            <div class="rt-mj">
+                <div>名家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">揭发者斯诺登的伟大时刻</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">当代语文教育扼杀了汉字文化</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">如何分辨是启蒙还是洗脑</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">大学校长的声望从何而来</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">考古与公众有多远之</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">艰难旅程</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--中侧 热门文学作品-->
+        <div class="col-md-4 col-sm-6 ss-hot clear">
+            <div class="ss-mid">
+                <h3><a href="#">肯尼亚蒙内铁路：承载着更多</a></h3>
+                <p>真实赵云的人生结局，被演义里的饭桶将军打败抑郁而死 在赵云辉煌的一生中有一个挺没有面子的结局</p>
+            </div>
+            <div class="ss-fill">
+                <div>文化
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">周仓能进关帝庙只因做对一件事</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">猪八戒做哪件事让人感动得热泪盈眶？</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">中国版的《深夜食堂》很中国也很不中</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">广场舞矛盾：“输出不够”是关键</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="ss-fed">
+                <div>史话
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">周作人究竟是怎么死的？</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">蒋介石庐山抗战讲话激动人心</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">孙权玩转江东的秘密武器</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">“清议亡而干戈至矣。”</a>
+                        <span  class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">东方出版社吴王夫差和伍子胥情同父子</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧 文化名家-->
+        <div class="col-md-4 col-sm-6 hidden-xs clear">
+            <div class="rt-bg">
+                <div>诗文墨大家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul class="lf">
+                    <li><a href="#">
+                        <img src="Images/mj_1.jpg" class="img-responsive" alt=""/>
+                        名家1
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_2.jpg" class="img-responsive"  alt=""/>
+                        名家2
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_3.jpg" class="img-responsive"  alt=""/>
+                        名家3
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_4.jpg" class="img-responsive" alt=""/>
+                        名家4
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_5.jpg" class="img-responsive" alt=""/>
+                        名家5
+                    </a></li> <li><a href="#">
+                    <img src="Images/mj_6.jpg" class="img-responsive" alt=""/>
+                    名家6
+                </a></li>
+                </ul>
+            </div>
+            <!--热度内容-->
+            <div class="lt-le">
+                <ul class="lt-dd lf">
+                    <li><a href="#">博文排行</a></li>
+                    <li><a href="#">热度排行</a></li>
+                </ul>
+                <div class="tt-switch">
+                <ul>
+                    <li>
+                        <div><i class="bill-1">1</i></div>
+                        <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div><i class="bill-2">2</i></div>
+                        <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-2">3</i></div>
+                        <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-item">4</i></div>
+                        <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-item">5</i></div>
+                        <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+              <div class="dd-switch">
+                <ul>
+                    <li>
+                        <div><i class="bill-1">1</i></div>
+                        <div><a href="#">儿时记忆的一款奢侈小吃：开口笑</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-2">2</i></div>
+                        <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-2">3</i></div>
+                        <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-item">4</i></div>
+                        <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-item">5</i></div>
+                        <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                            <span class="rt signature"><a href="#">张三</a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--旅游板块-->
+    <div class="row" id="trav-title">
+        <div class="col-xs-12"><span class="glyphicon glyphicon-hand-right"></span> 旅游</div>
+    </div>
+    <div class="row" id="trav-part">
+        <!--具体内容部分：左侧-中策-右侧-->
+        <!--左侧 图片文章-->
+        <div class="col-md-4 hidden-xs hidden-sm clear lt-tt">
+            <!--图文部分-->
+            <dl>
+                <dt><img src="Images/4.jpg" class="img-responsive"/></dt>
+                <dd><b>游来游去，何处是家</b></dd>
+            </dl>
+            <!--名家内容-->
+            <div class="rt-mj">
+                <div>牛人在路上
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">揭发者斯诺登的伟大时刻</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">当代语文教育扼杀了汉字文化</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">如何分辨是启蒙还是洗脑</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">大学校长的声望从何而来</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">考古与公众有多远之</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">艰难旅程</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--中侧 热门旅游-->
+        <div class="col-md-4 col-sm-6 clear ss-hot">
+            <div class="ss-mid">
+                <h3><a href="#">肯尼亚蒙内铁路：承载着更多</a></h3>
+                <p>真实赵云的人生结局，被演义里的饭桶将军打败抑郁而死 在赵云辉煌的一生中有一个挺没有面子的结局</p>
+            </div>
+            <div class="ss-fill">
+                <div>大玩家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">周仓能进关帝庙只因做对一件事</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">猪八戒做哪件事让人感动得热泪盈眶？</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">中国版的《深夜食堂》很中国也很不中</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">广场舞矛盾：“输出不够”是关键</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#">张三</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧 旅游-->
+        <div class="col-md-4 col-sm-6  hidden-xs clear">
+            <div class="rt-bg">
+                <div>旅游达人
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul class="lf">
+                    <li><a href="#">
+                        <img src="Images/mj_1.jpg" class="img-responsive" alt=""/>
+                        名家1
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_2.jpg" class="img-responsive"  alt=""/>
+                        名家2
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_3.jpg" class="img-responsive"  alt=""/>
+                        名家3
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_4.jpg" class="img-responsive" alt=""/>
+                        名家4
+                    </a></li>
+                    <li><a href="#">
+                        <img src="Images/mj_5.jpg" class="img-responsive" alt=""/>
+                        名家5
+                    </a></li> <li><a href="#">
+                    <img src="Images/mj_6.jpg" class="img-responsive" alt=""/>
+                    名家6
+                </a></li>
+                </ul>
+            </div>
+            <!--热度内容-->
+            <div class="lt-le">
+                <ul class="lt-dd lf">
+                    <li><a href="#">博文排行</a></li>
+                    <li><a href="#">热度排行</a></li>
+                </ul>
+                <div class="tt-switch">
+                    <ul>
+                        <li>
+                            <div><i class="bill-1">1</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div><i class="bill-2">2</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-2">3</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">4</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">5</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dd-switch">
+                    <ul>
+                        <li>
+                            <div><i class="bill-1">1</i></div>
+                            <div><a href="#">儿时记忆的一款奢侈小吃：开口笑</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-2">2</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-2">3</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">4</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">5</i></div>
+                            <div><a href="#">猪身上最便宜最好吃的肉，两块钱</a>
+                                <span class="rt signature"><a href="#">张三</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<!--底部-->
+<footer>
+    <div class="links"><a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">人才招聘</a>|<a href="#">商家入驻</a>|<a href="#">广告服务</a>|<a href="#">友情链接</a></div>
+    <div class="copyright">北京市公安局朝阳分局备案编号110105014669  |  京ICP证070359号  |  Copyright © 2004-2017 版权所有
+    </div>
+</footer>
+
+
+    <!--6 引入两个js插件文件-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!--7 引入检查文件-->
+    <script src="js/bootlint.js"></script>
+    <script>
+        bootlint.showLintReportForCurrentDocument([]);
+    </script>
+</body>
 </html>
+
